@@ -8,14 +8,17 @@ DISTRO="na"
 
 # ask if they switched fonts first
 
-# switch to this directory
+# prepare path
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
+HOMEDIR="$(realpath ~)"
+REPODIR="$(realpath ../../)"
+
 # prepare git repository
 
-git --git-dir=~/dotfiles/.git --work-tree=~/ reset --hard
-git --git-dir=~/dotfiles/.git config --local status.showUntrackedFiles no
+git --git-dir=$REPODIR/.git --work-tree=$HOMEDIR reset --hard
+git --git-dir=$REPODIR/.git config --local status.showUntrackedFiles no
 
 # detect mac vs linux
 
