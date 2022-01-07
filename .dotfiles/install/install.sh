@@ -5,7 +5,6 @@ WSLV="na"
 DISTRO="na"
 
 # did you clone to ~/dotfiles?
-
 # ask if they switched fonts first
 
 # prepare path

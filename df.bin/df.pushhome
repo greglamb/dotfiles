@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+HOMEDIR="$(realpath ~)"
+REPODIR="$(realpath ~/dotfiles)"
+
+git --git-dir=$REPODIR/.git --work-tree=$HOMEDIR reset --hard
