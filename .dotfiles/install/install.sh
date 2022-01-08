@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-OS="unknown"
-WSLV="na"
-DISTRO="na"
+DFOS="unknown"
+DFWSL="na"
+DFDISTRO="na"
 
 # did you clone to ~/dotfiles?
 # ask if they switched fonts first
@@ -25,42 +25,40 @@ git --git-dir=$REPODIR/.git config --local status.showUntrackedFiles no
 # detect mac vs linux
 
 case "$OSTYPE" in
-  darwin*)  OS="macos" ;; 
-  linux*)   OS="linux" ;;
+  darwin*)  DFOS="macos" ;; 
+  linux*)   DFOS="linux" ;;
   *)        echo "Unsupported OS: $OSTYPE"; exit ;;
 esac
 
 # detect linux distribution and wsl
 
-if [ $OS == "linux" ]; then
+if [ $DFOS == "linux" ]; then
     case "`cat /etc/*-release | grep ^NAME= | sed 's/NAME=//' | sed 's/"//g'`" in
-    Ubuntu)   DISTRO="ubuntu" ;;
+    Ubuntu)   DFDISTRO="ubuntu" ;;
     *)        echo "Unsupported distribution" ;;
     esac
 
     case "`uname -r`" in
-        *microsoft-standard*) WSLV="2" ;;
-        *Microsoft*)          WSLV="1" ;;
+        *microsoft-standard*) DFWSL="2" ;;
+        *Microsoft*)          DFWSL="1" ;;
         *)                    echo "WSL not detected" ;;
     esac
 fi
 
 # install fish
 
-if [ $OS == "macos" ]; then
-    source ./components/macos/install_fish.sh
-elif [ $OS == "linux" ] && [ $DISTRO == "ubuntu" ]; then
-    source ./components/linux/ubuntu/install_fish.sh
+if [ $DFOS == "macos" ]; then
+    sudo port install fish
+    #echo /usr/local/bin/fish | sudo tee -a /etc/shells
+    #chsh -s /usr/local/bin/fish
+    #https://stackoverflow.com/a/20506404
+elif [ $DFOS == "linux" ] && [ $DFDISTRO == "ubuntu" ]; then
+    sudo apt-add-repository ppa:fish-shell/release-3
+    sudo apt update
+    sudo apt install fish
+    chsh -s /usr/bin/fish
 fi
 
-# install omf
+# install handoff
 
-source ./components/install_omf.fish
-
-# install tide
-
-source ./components/install_tide.fish
-
-# install the latest git-completion script for bash"
-#curl --create-dirs --location --output ~/.config/bash/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-
+source ./install.fish
