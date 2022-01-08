@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
+dtgit() { /usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME $@ }
+mvdir() { mkdir -p "${@: -1}" && mv "$@"; }
+
 backup="$HOME/.dotfiles.backup-"`date +"%Y%m%d_%H%M%S"`
 cd $HOME
 mkdir -p $backup
 mv $HOME/.dotfiles.git $backup/
 git clone --bare git@github.com:greglamb/dotfiles.git $HOME/.dotfiles.git
-dtgit() { /usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME $@ }
-mvdir() { mkdir -p "${@: -1}" && mv "$@"; }
 dtgit checkout
 if [ $? = 0 ]; then
   echo "Checked out config.";
