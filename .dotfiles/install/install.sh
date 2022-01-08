@@ -4,6 +4,14 @@ DFOS="unknown"
 DFWSL="na"
 DFDISTRO="na"
 
+echo "Did you install the fonts?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) break;;
+        No ) exit;;
+    esac
+done
+
 # did you clone to ~/dotfiles?
 # ask if they switched fonts first
 # add to git config
