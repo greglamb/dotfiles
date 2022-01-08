@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+$HOME/df.bin/dfgit status
