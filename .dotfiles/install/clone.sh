@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dtgit() { /usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME $@ }
+dtgit() { /usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME "$@" }
 mvdir() { mkdir -p "${@: -1}" && mv "$@"; }
 
 backup="$HOME/.dotfiles.backup-"`date +"%Y%m%d_%H%M%S"`
