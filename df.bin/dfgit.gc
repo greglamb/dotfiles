@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 IFS=' '
-$HOME/df.bin/dfgit rm $(git ls-files --deleted) 2> /dev/null
-$HOME/df.bin/dfgit commit --no-verify -m "$*"
+git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" rm $(git ls-files --deleted) 2> /dev/null
+git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" commit --no-verify -m "$*"

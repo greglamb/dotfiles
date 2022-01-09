@@ -1,7 +1,6 @@
-set -g -x fish_greeting ''
+set -g fish_greeting
+status is-interactive || exit
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
+set -x EDITOR nano
 
 fish_add_path -mp $HOME/df.bin
