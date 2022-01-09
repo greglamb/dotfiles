@@ -7,9 +7,12 @@ function dfgit.add --wraps=git
 end
 
 function dfgit.push --wraps=git
-    git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" push $argv
+    git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" push
 end
 
+function dfgit.pull --wraps=git
+    git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" pull
+
 function dfgit.status --wraps=git
-    git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" status $argv
+    git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" status
 end
