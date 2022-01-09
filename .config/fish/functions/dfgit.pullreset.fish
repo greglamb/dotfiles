@@ -1,4 +1,4 @@
 function dfgit.pull --wraps=git
-    dfgit fetch --all
-    dfgit reset --hard origin/master
+    dfgit reset --hard HEAD
+    dfgit pull
 end
