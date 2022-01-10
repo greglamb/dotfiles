@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 IFS=' '
-git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" rm $(git ls-files --deleted) 2> /dev/null
+git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" add -u
 git --git-dir="$HOME/.dotfiles.git" --work-tree="$HOME" commit --no-verify -m "$*"
