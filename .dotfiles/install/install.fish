@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-source ../source/osvals.fish
+source ../fish/source/osvals.fish
 
 # install shell
 
@@ -13,10 +13,6 @@ fisher install ilancosman/tide
 fisher install jorgebucaran/nvm.fish
 nvm install lts
 npm i -g zx
-
-# update git completion
-
-curl --create-dirs --location --output ~/.config/bash/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
 # install delta
 
