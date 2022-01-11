@@ -1,5 +1,4 @@
 - .gitconfig include from the cli in install
 - convert data from mac dotfiles
-- convert data from wsl dotfiles
 - include modern cmd replacements
 - create private repo for profile data
