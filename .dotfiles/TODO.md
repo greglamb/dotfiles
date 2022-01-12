@@ -1,4 +1,3 @@
 - .gitconfig include from the cli in install
-- convert data from mac dotfiles
 - include modern cmd replacements
-- create private repo for profile data
+- finish install scripts
