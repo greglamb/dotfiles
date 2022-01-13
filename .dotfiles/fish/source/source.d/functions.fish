@@ -1,6 +1,10 @@
-for x in find $DFDIR/fish/functions.d -type d -maxdepth 1
-    set y string split . $x
-    set t string = $y[-1]
+for x in (find $DFDIR/fish/functions.d -maxdepth 1 -type d)
+    set y (string split . $x)
+    set t $y[-1]
+
+    if test $t = "d"
+        continue
+    end
 
     if test $t = "all"
         set -a fish_function_path $x
