@@ -1,4 +1,4 @@
-function dfaddsyncup
+function dfaddsyncpush
     dfgit add $argv
-    dfsyncup
+    dfsyncpush
 end

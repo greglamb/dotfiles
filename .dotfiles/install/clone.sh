@@ -25,5 +25,3 @@ if [ $? = 0 ]; then
 fi;
 dtgit checkout
 dtgit config status.showUntrackedFiles no
-
-        

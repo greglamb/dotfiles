@@ -10,3 +10,4 @@ end
 
 fish_add_path -mp $DFDIR/bin
 fish_add_path -mp $HOME/bin
+fish_add_path -mp /opt/local/bin

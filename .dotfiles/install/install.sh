@@ -25,11 +25,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 HOMEDIR="$(realpath ~)"
 REPODIR="$(realpath ../../)"
 
-# prepare git repository
-
-git --git-dir=$REPODIR/.git --work-tree=$HOMEDIR reset --hard
-git --git-dir=$REPODIR/.git config --local status.showUntrackedFiles no
-
 # detect mac vs linux
 
 case "$OSTYPE" in
@@ -57,9 +52,9 @@ fi
 
 if [ $DFOS == "macos" ]; then
     sudo port install fish
-    #echo /usr/local/bin/fish | sudo tee -a /etc/shells
-    #chsh -s /usr/local/bin/fish
-    #https://stackoverflow.com/a/20506404
+    sudo chpass -s /opt/local/bin/fish glamb
+    sudo sh -c 'echo /opt/local/bin/fish >> /etc/shells'
+    #sudo port install xsel
 elif [ $DFOS == "linux" ] && [ $DFDISTRO == "ubuntu" ]; then
     sudo apt-add-repository ppa:fish-shell/release-3
     sudo apt update
