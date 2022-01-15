@@ -1,2 +1,4 @@
 [include]
     path = delta
+    path = main
+    path = push

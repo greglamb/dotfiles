@@ -2,9 +2,10 @@
 
 # git-historicalrm {repo url} {local git folder target} {file to delete}
 
-#git clone --mirror $1 $2
-#git --git-dir=$2 rm
-#java -jar ~/.dotfiles/other/bfg-1.14.0.jar --delete-files $3 $2
-#cd $2
-#git reflog expire --expire=now --all && git gc --prune=now --aggressive
-#git push --force
+git clone --mirror $1 $2
+git --git-dir=$2 rm $3
+git commit -m 'deleted file'
+java -jar ~/.dotfiles/other/bfg-1.14.0.jar --delete-files $3 $2
+cd $2
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+git push --force

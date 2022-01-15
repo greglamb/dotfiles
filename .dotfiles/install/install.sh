@@ -15,8 +15,8 @@ done
 # did you clone to ~/dotfiles?
 # ask if they switched fonts first
 # add to git config
-# [include]
-# path = ~/.gitconfig.d/index
+
+git config --global --add include.path .gitconfig.d/index
 
 # prepare path
 
