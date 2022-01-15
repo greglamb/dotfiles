@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env cat
 
 git clone "$1" && cd "$(basename "$1" .git)"
 ~/dotfiles/public_toolbox/bin/git-pullallbranches.sh

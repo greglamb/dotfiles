@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env cat
 
 git checkout master
 git fetch --all

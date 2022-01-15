@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env cat
 
 DFOS="unknown"
 DFWSL="na"
@@ -28,7 +28,7 @@ REPODIR="$(realpath ../../)"
 # detect mac vs linux
 
 case "$OSTYPE" in
-  darwin*)  DFOS="macos" ;; 
+  darwin*)  DFOS="macos" ;;
   linux*)   DFOS="linux" ;;
   *)        echo "Unsupported OS: $OSTYPE"; exit ;;
 esac
