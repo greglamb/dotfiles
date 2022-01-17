@@ -13,6 +13,8 @@ dtibackupdir="$HOME/.dotfiles.backup-"`date +"%Y%m%d_%H%M%S"`
 cd $HOME
 mkdir -p $dtibackupdir
 mv $HOME/.dotfiles.git $dtibackupdir/
+mv $HOME/.dotfiles $dtibackupdir/
+mv $HOME/.gitconfig.d $dtibackupdir/
 git clone --bare git@github.com:greglamb/dotfiles.git $HOME/.dotfiles.git
 dtgit checkout
 if [ $? = 0 ]; then
