@@ -12,9 +12,10 @@ if [ $DFWSL = "1" ]
             ~/bin/cmd.exe
         end
 
-        function code --wraps=code
-            cmd /c code
-        end
+#        function code --wraps=code
+#            	chmod 755 -R $WINHOME/AppData/Local/Programs/Microsoft\ VS\ Code
+#		$WINHOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code
+#        end
 
         function winhome
             cd $WINHOME
