@@ -6,7 +6,7 @@ if [ $DFWSL = "1" ]
         umask 022
 
         set -gx WINUSER (~/bin/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
-        set -gx WINHOME /c/Users/(~/bin/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
+        set -gx WINHOME /mnt/c/Users/(~/bin/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
 
         function cmd --wraps=cmd.exe
             ~/bin/cmd.exe
