@@ -1,4 +1,4 @@
-if [ $DFOS = "macos" ]
+if [ $DFOS = "linux" ]
 
     function noteshome
         cd ~/Dendron/

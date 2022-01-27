@@ -13,11 +13,15 @@ if [ $DFWSL = "1" ]
         end
 
         function code --wraps=code
-	    $WINHOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code
+            $WINHOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code
         end
 
         function winhome
             cd $WINHOME
+        end
+
+        function noteshome
+            cd $WINHOME/Dendron/
         end
 
         #set-gx DOCKER_HOST=tcp://localhost:2375
