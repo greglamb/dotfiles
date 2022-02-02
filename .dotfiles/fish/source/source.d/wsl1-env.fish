@@ -26,7 +26,7 @@ if [ $DFWSL = "1" ]
 
         #set-gx DOCKER_HOST=tcp://localhost:2375
 
-        winhome
+        home
 
     end
 end
