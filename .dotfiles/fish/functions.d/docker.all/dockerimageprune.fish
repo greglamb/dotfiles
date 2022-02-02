@@ -1,3 +1,3 @@
 function dockerimageprune
-    docker image prune -af
+    docker image prune -af $argv
 end

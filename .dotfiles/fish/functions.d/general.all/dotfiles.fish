@@ -1,3 +1,3 @@
 function dotfiles
-    code ~/dotfiles/
+    code ~/.dotfiles/
 end

@@ -1,3 +1,3 @@
 function docker --wraps=docker
-    nerdctl
+    nerdctl $argv
 end

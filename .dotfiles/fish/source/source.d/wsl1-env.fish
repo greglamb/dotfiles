@@ -8,12 +8,11 @@ if [ $DFWSL = "1" ]
         set -gx WINUSER (~/bin/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
         set -gx WINHOME /mnt/c/Users/(~/bin/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
 
-        function cmd --wraps=cmd.exe
-            ~/bin/cmd.exe
-        end
+        alias cmd="~/bin/cmd.exe /c"
 
         function code --wraps=code
-            $WINHOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code
+            #cmd code $argv
+            $WINHOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code $argv
         end
 
         function winhome

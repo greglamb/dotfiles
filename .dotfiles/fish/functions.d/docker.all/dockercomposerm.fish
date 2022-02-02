@@ -1,3 +1,3 @@
 function dockercomposerm
-    docker-compose rm -fsv
+    docker-compose rm -fsv $argv
 end
