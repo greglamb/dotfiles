@@ -1,4 +1,4 @@
-if [ $DFWSL = "1" ]
+if [ $DFWSL = 1 ]
     if not test -e ~/bin/cmd.exe
         echo 'ERROR: Copy cmd.exe to the bin directory in your Users profile, and then create a symbolic link to it in ~/bin'
     else
@@ -23,7 +23,7 @@ if [ $DFWSL = "1" ]
             cd $WINHOME/Dendron/
         end
 
-        #set-gx DOCKER_HOST=tcp://localhost:2375
+        set-gx CONTAINERD_ADDRESS=unix://var/run/docker.sock
 
         home
 
