@@ -23,7 +23,7 @@ if [ $DFWSL = 1 ]
             cd $WINHOME/Dendron/
         end
 
-        set-gx CONTAINERD_ADDRESS=unix://var/run/docker.sock
+        set -gx CONTAINERD_ADDRESS unix://var/run/docker.sock
 
         home
 
