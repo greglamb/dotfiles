@@ -12,7 +12,7 @@ highlight: true
 indent_character: '|'
 journals:
   default:
-    encrypt: false
+    encrypt: true
     journal: ~/jrnl/work.txt
 linewrap: 79
 tagsymbols: '@'
