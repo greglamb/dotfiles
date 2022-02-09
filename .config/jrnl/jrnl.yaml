@@ -7,8 +7,8 @@ default_hour: 9
 default_minute: 0
 display_format: markdown
 editor: nano
-encrypt: false
-highlight: true
+encrypt: true
+highlight: false
 indent_character: '|'
 journals:
   default:
@@ -17,5 +17,5 @@ journals:
 linewrap: 79
 tagsymbols: '@'
 template: false
-timeformat: '%Y-%m-%d %H:%M'
+timeformat: '%a %Y-%m-%d %I:%M %p'
 version: v2.8.3

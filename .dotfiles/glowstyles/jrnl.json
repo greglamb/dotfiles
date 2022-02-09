@@ -1,0 +1,22 @@
+{
+    "h1": {
+        "prefix": "📅 ",
+        "margin": 2,
+        "bold": true,
+        "color": "9",
+        "background_color": "235"
+    },
+    "h2": {
+        "prefix": "🔻 ",
+        "margin": 4,
+        "bold": true,
+        "color": "1",
+        "background_color": "235"
+    },
+    "h3": {
+        "prefix": "🔹 ",
+        "margin": 6,
+        "color": "15"
+    },
+    "emoji": {}
+}

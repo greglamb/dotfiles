@@ -1,3 +1,3 @@
 function jrnlon
-    jrnl --format fancy -on $argv
+    jrnlget -on $argv
 end
