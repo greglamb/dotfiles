@@ -1,4 +1,4 @@
 function j
-    set log (string replace --regex ' - ' '. ' $argv)
+    set log (string replace -r  - . $argv)
     jrnl $log
 end

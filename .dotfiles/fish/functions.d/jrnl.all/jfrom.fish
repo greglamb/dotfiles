@@ -1,3 +1,3 @@
-function jrnlfrom
+function jfrom
     jrnlget -from $argv
 end

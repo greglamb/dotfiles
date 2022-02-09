@@ -14,13 +14,13 @@
         "background_color": "235"
     },
     "h3": {
-        "prefix": "🔹 ",
+        "prefix": "🔴 ",
         "margin": 6,
         "color": "15"
     },
     "paragraph": {
-        "margin": 35,
-        "color": "12"
+        "margin": 33,
+        "color": "226"
     },
     "emoji": {}
 }
