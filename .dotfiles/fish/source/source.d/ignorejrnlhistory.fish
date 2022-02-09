@@ -3,3 +3,4 @@
 #end
 
 abbr --add jrnl " jrnl"
+abbr --add j " j"
