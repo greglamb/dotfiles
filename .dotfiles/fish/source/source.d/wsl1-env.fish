@@ -9,6 +9,7 @@ if [ $DFWSL = 1 ]
         set -gx WINHOME /mnt/c/Users/(~/bin/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
 
         alias cmd="~/bin/cmd.exe /c"
+        alias open="~/bin/explorer.exe"
 
         function code --wraps=code
             #cmd code $argv
