@@ -1,3 +1,3 @@
 function art
-    php artisan
+    php artisan $argv
 end

@@ -1,3 +1,3 @@
 function pushkey
-    ssh-copy-id
+    ssh-copy-id $argv
 end
