@@ -2,3 +2,4 @@
     path = delta
     path = main
     path = push
+    path = lineendings

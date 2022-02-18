@@ -1,0 +1,5 @@
+https://www.aleksandrhovhannisyan.com/blog/crlf-vs-lf-normalizing-line-endings-in-git/
+
+.gitattributes
+
+* text=auto
