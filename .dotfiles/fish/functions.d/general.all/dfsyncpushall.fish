@@ -1,4 +1,4 @@
-function dfsyncall
+function dfsyncpushall
     dfsyncpush
     dsyncpush
     jsyncpush
