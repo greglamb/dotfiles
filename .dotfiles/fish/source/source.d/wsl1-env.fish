@@ -13,7 +13,8 @@ if [ $DFWSL = 1 ]
 
         function code --wraps=code
             #cmd code $argv
-            $WINHOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code $argv
+            #$WINHOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code $argv
+	    /mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code $argv
         end
 
         function winhome
