@@ -6,7 +6,7 @@ if [ $DFWSL = 1 ]
         umask 022
 
         set -gx WINUSER (~/bin/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
-        set -gx WINHOME /mnt/c/Users/(~/bin/cmd.exe /c 'echo %USERNAME%' | sed -e 's/\r//g')
+        set -gx WINHOME /mnt/c/Users/$WINUSER
 
         alias cmd="~/bin/cmd.exe /c"
         alias open="~/bin/explorer.exe"
@@ -14,7 +14,7 @@ if [ $DFWSL = 1 ]
         function code --wraps=code
             #cmd code $argv
             #$WINHOME/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code $argv
-	    /mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code $argv
+            /mnt/c/Program\ Files/Microsoft\ VS\ Code/bin/code $argv
         end
 
         function winhome
